@@ -1,8 +1,6 @@
 # Texas Septic Permit Checklist
 
-> **TCEQ OSSF permit checklist with county Designated Representative directory.**
-> Forked from the [texas-septic-toolkit](https://github.com/TexasSepticEnthusiast/texas-septic-toolkit).
-> Built by [Out West Septic](https://outwestseptic.com) — Lone Camp, TX — **TCEQ OSSF Installer I | OS0041298** — 940.452.0598
+TCEQ OSSF permit checklist with county Designated Representative directory. Forked from the [texas-septic-toolkit](https://github.com/TexasSepticEnthusiast/texas-septic-toolkit). Built by [Out West Septic](https://outwestseptic.com) in Lone Camp, TX. TCEQ OSSF Installer I, License OS0041298. Phone 940.452.0598.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -43,8 +41,8 @@ Out West Septic serves Palo Pinto, Hood, Erath, Stephens, Young, Jack, and Eastl
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT. See [LICENSE](./LICENSE).
 
 ---
 
-*Out West Septic — outwestseptic.com — 940.452.0598 — TCEQ OSSF Installer I OS0041298 — Lone Camp, TX*
+Out West Septic, outwestseptic.com, 940.452.0598, TCEQ OSSF Installer I OS0041298, Lone Camp, TX
