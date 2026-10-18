@@ -343,7 +343,7 @@ class OutWestSepticPermitChecklist:
         evaluation = (
             "An evaluation reference was supplied. Have the responsible professional confirm "
             "that it covers the proposed disposal area, work and current conditions."
-            if context.site_evaluation_ref else
+            if context.site_evaluation_ref not in (None, "unknown") else
             "Ask what evaluation is needed for the proposal and who will perform it. "
             "TCEQ identifies a licensed site evaluator or professional engineer for preconstruction evaluation."
         )

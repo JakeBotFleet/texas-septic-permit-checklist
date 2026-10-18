@@ -155,6 +155,19 @@ class ChecklistTests(unittest.TestCase):
         self.assertIn("proposed disposal area", step.action)
         self.assertFalse(any("Available evaluation" in label for label in result.missing_information))
 
+    def test_unknown_evaluation_reference_keeps_evaluation_unresolved(self):
+        authority = OutWestSepticAuthorityRecord("Example office", "Local response", "2020-01-01")
+        for reference in ("unknown", " unknown "):
+            with self.subTest(reference=reference):
+                result = self.create(site_evaluation_ref=reference, authority=authority)
+                step = next(item for item in result.items if item.id == "evaluation")
+                self.assertTrue(any("Available evaluation" in label for label in result.missing_information))
+                self.assertIn("Ask what evaluation is needed", step.action)
+                self.assertNotIn("An evaluation reference was supplied", step.action)
+                self.assertEqual(result.context.site_evaluation_ref, "unknown")
+                self.assertEqual(result.context.authority, authority)
+                self.assertEqual(result.to_dict()["authority_record_status"], "user-recorded-not-verified")
+
     def test_complete_context_never_becomes_a_verified_or_approved_result(self):
         result = self.create(
             property_ref="Example parcel", project_type="new", city_limits="outside",
